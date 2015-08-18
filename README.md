@@ -1,6 +1,6 @@
 # xo-loader [![Build Status](http://img.shields.io/travis/Semigradsky/xo-loader.svg)](https://travis-ci.org/Semigradsky/xo-loader)
 
-> [XO](https://github.com/sindresorhus/xo) loader for webpack. Based by [eslint-loader](https://github.com/MoOx/eslint-loader)
+> [XO](https://github.com/sindresorhus/xo) loader for webpack. Based on [eslint-loader](https://github.com/MoOx/eslint-loader)
 
 ## Install
 

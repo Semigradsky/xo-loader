@@ -69,7 +69,7 @@ module.exports = function (input) {
 	var config = assign(
 		// loader defaults
 		{
-			formatter: require('xo/node_modules/eslint/lib/formatters/stylish')
+			formatter: xo.getFormatter()
 		},
 		// user defaults
 		this.options.xo || {},
