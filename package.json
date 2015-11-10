@@ -54,14 +54,14 @@
     "simple"
   ],
   "peerDependencies": {
-    "xo": "^0.9.0"
+    "xo": "^0.10.0"
   },
   "dependencies": {
     "loader-utils": "^0.2.11",
     "object-assign": "^4.0.1"
   },
   "devDependencies": {
-    "xo": "^0.9.0",
+    "xo": "^0.10.0",
     "tape": "^4.2.0",
     "webpack": "^1.12.2"
   }
