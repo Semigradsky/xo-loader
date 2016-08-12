@@ -88,7 +88,7 @@ module.exports = function (input) {
 	// async
 	try {
 		lint(input, config, this, callback);
-	} catch (e) {
-		return callback(e);
+	} catch (err) {
+		return callback(err);
 	}
 };
