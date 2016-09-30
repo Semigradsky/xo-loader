@@ -57,7 +57,7 @@
     "xo": "^0.16.0"
   },
   "dependencies": {
-    "loader-utils": "^0.2.12",
+    "loader-utils": "^0.2.16",
     "object-assign": "^4.0.1"
   },
   "devDependencies": {

@@ -55,6 +55,31 @@ module.exports = {
 }
 ```
 
+### webpack@2.1.0-beta.23 and up
+
+As of [latest release notes](https://github.com/webpack/webpack/releases), `preLoaders` and `postLoaders` have been deprecated in favor of `enforce: 'pre'` or `enforce: 'post'`. Also custom properties are not allowed, and can be supplied through `webpack.LoaderOptionsPlugin({})`.
+
+```js
+module.exports = {
+	// ...
+	module: {
+		loaders [
+			{test: /\.js$/, enforce:'pre', loader: 'xo-loader', exclude: /node_modules/}
+		]
+	},
+	plugins: [
+		new webpack.LoaderOptionsPlugin({
+			options: {
+				xo: {
+					emitError: true
+				}
+			}
+		})
+	]
+	// ...	
+}
+```
+
 ### Options
 
 You can pass [XO options](https://github.com/sindresorhus/xo#config) directly by
