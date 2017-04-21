@@ -63,6 +63,6 @@
   "devDependencies": {
     "xo": "^0.17.0",
     "tape": "^4.5.1",
-    "webpack": "^1.12.14"
+    "webpack": "^2.2.1"
   }
 }
