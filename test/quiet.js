@@ -24,7 +24,7 @@ test('xo-loader only returns errors and not warnings if quiet is set', function 
 			stats.hasWarnings(),
 			'a file that contains eslint warning should return nothing if quiet option is true'
 		);
-		// console.log(stats.compilation.errors)
+		// console.log(stats.compilation.errors);
 		t.notOk(
 			stats.hasErrors(),
 			'a file that contains eslint warning should return no error if it ' +

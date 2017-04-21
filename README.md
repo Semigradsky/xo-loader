@@ -138,22 +138,6 @@ module.exports = {
 
 Loader will always return warnings if option is set to `true`.
 
-#### `quiet` (default: `false`)
-
-Loader will process and report errors only and ignore warnings if this option is set to true
-
-```js
-module.exports = {
-	entry: "...",
-	module: {
-		// ...
-	}
-	xo: {
-		quiet: true
-	}
-}
-```
-
 ##### `failOnWarning` (default: `false`)
 
 Loader will cause the module build to fail if there are any xo warnings.

@@ -6,6 +6,16 @@ var loaderUtils = require('loader-utils');
 function lint(input, config, webpack, callback) {
 	var res = xo.lintText(input, config);
 
+	if (
+		(res.errorCount === 0 && res.warningCount === 0) ||
+		res.results.length === 0
+	) {
+		if (callback) {
+			callback(null, input);
+		}
+		return;
+	}
+
 	// skip ignored file warning
 	if (!(
 		res.warningCount === 1 &&
@@ -14,18 +24,6 @@ function lint(input, config, webpack, callback) {
 		res.results[0].messages[0].message.indexOf('.eslintignore') > -1 &&
 		res.results[0].messages[0].message.indexOf('--no-ignore') > -1
 	)) {
-		// quiet filter done now
-		// eslint allow rules to be specified in the input between comments
-		// so we can found warnings defined in the input itself
-		if (res.warningCount && config.quiet) {
-			res.warningCount = 0;
-			res.results[0].warningCount = 0;
-			res.results[0].messages = res.results[0].messages
-				.filter(function (message) {
-					return message.severity !== 1;
-				});
-		}
-
 		if (res.errorCount || res.warningCount) {
 			// add filename for each results so formatter can have relevant filename
 			res.results.forEach(function (r) {
