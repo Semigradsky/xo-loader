@@ -5,7 +5,7 @@
 ## Install
 
 ```console
-$ npm install xo-loader
+$ npm install xo-loader --save-dev
 ```
 
 ## Usage
