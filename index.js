@@ -67,6 +67,8 @@ module.exports = function (input) {
 	var config = assign(
 		// loader defaults
 		{
+			cwd: this.context,
+			filename: this.resourcePath,
 			formatter: xo.getFormatter()
 		},
 		// user defaults
